@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="col-md-4 offset-md-5">
+
+    <div class="card cad-body">
+        <form action="/update/{{personas.0}}" method="POST">
+            <div class="form-group">
+                <input type="text" name="nombre" placeholder="Nombres" value="{{personas.1}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type=" text" name="apellido" placeholder="Apellidos" value="{{personas.2}}"
+                    class="form-control ">
+            </div>
+            <div class="form-group">
+                <input type="text" name="red_social" placeholder="red_social" value="{{personas.3}}"
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="correo" placeholder="correo" value="{{personas.4}}" class="form-control">
+            </div>
+
+            <div class="form-group d-grid gap-2 col-6 mx-auto">
+                <button type="submit" class="btn btn-primary btn-block">
+                    Save
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
